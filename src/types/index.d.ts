@@ -36,6 +36,7 @@ export type SiteConfig = {
   links: {
     twitter?: string;
     github: string;
+    linkedin?: string;
   };
 };
 
@@ -49,8 +50,8 @@ export type MarketingConfig = {
 };
 
 export type NavMenuConfig = {
-  infosNav: SidebarNavItem[];
-  examplesNav: SidebarNavItem[];
+  infosNav?: SidebarNavItem[];
+  examplesNav?: SidebarNavItem[];
   links: MenuItem[];
 };
 

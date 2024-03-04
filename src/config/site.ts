@@ -1,11 +1,12 @@
 import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-    name: "Ayriel Noriega",
+    name: 'Ayriel Noriega',
     description:
-        "Mi portafolio web",
-    url: "https://ayrielnoriega.com",
+        'Desarrollador FullStack | Laravel, ReactJs, JavaScript, PHP, Node.js',
+    url: 'https://ayrielnoriega.com',
     links: {
-        github: "https://github.com/AyrielNoriega/",
+        github: 'https://github.com/AyrielNoriega/',
+        linkedin: 'https://www.linkedin.com/in/ayrielnoriega/',
     },
 };
