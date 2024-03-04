@@ -2,67 +2,94 @@
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Icon } from "astro-icon/components";
-import { ThemeToggle } from "@/components/theme-toggle";
 
-type Props = {
-  className?: string;
-};
+const year = new Date().getFullYear();
 
-const { className } = Astro.props;
+const links = [
+    {
+        url: "/",
+        description: "Astro's official website",
+        icon: "mdi:home",
+    },
+    {
+        url: "https://github.com/AyrielNoriega/",
+        description: "View source on GitHub",
+        icon: "mdi:github",
+    },
+    {
+        url: "https://astro.build/chat",
+        description: "Astro on Discord",
+        icon: "mdi:linkedin",
+    },
+    // {
+    //     url: "https://twitter.com/astrodotbuild",
+    //     description: "Astro on Twitter",
+    //     icon: "twitter",
+    // },
+];
 ---
 
-<footer class={cn(className)}>
-  <div
-    class="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0"
-  >
-    <div
-      class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0"
-    >
-      <a href="/" aria-label="Astronomy homepage">
-        <Icon name="stars-outline" class="size-8" />
-      </a>
+<footer>
+    <div class="">
+        <div>
+            <ul class="icons">
+                {
+                    links.map((link) => (
+                        <li>
+                            <a
+                                class="flex size-16 items-center justify-center rounded-full border-2 border-current p-4 hover:bg-sky-400"
+                                href={ link.url }
+                            >
+                                <span class="sr-only">{ link.description }</span>
+                                <Icon class="size-full" name={ link.icon } />
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+            <!-- <a href="/" aria-label="Astronomy homepage">
+                <Icon name="stars-outline" class="size-8" />
+            </a> -->
 
-      <p class="text-center text-sm leading-loose md:text-left balance-text">
-        Built by{" "}
-        <a
-          href={siteConfig.links.twitter}
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          mickasmt
-        </a>
-        . Based on{" "}
-        <a
-          href="https://github.com/shadcn-ui/taxonomy"
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          shadcn-ui/taxonomy
-        </a>
-        . Hosted on{" "}
-        <a
-          href="https://vercel.com"
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          Vercel
-        </a>
-        . The source code is available on{" "}
-        <a
-          href={siteConfig.links.github}
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          GitHub
-        </a>
-        .
-      </p>
+            <!-- <p class="text-center text-sm leading-loose md:text-left balance-text">
+                Built by{" "}
+                <a
+                    href={siteConfig.links.twitter}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="font-medium underline underline-offset-4"
+                >
+                    mickasmt
+                </a>
+            </p> -->
+        </div>
+        <small class="font-medium">&copy; { year } by <a href={ siteConfig.links.github }>Ayn</a>. All Rights Reserved.</small>
     </div>
-
-    <ThemeToggle client:idle />
-  </div>
 </footer>
+
+<style>
+
+    footer {
+        margin: 4rem 0;
+    }
+
+    ul.icons {
+        cursor: default;
+        list-style: none;
+        padding: 0;
+    }
+
+    ul.icons li {
+        display: inline-block;
+        padding: 0 0.5rem;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    small a {
+        color: #375a7f;
+        text-decoration: none;
+    }
+</style>

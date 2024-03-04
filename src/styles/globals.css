@@ -39,7 +39,7 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: 234 83% 7%;
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -52,12 +52,12 @@
     --popover-foreground: 215 20.2% 65.1%;
 
     --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --input: 207, 90%, 54%;
 
     --card: 224 71% 4%;
     --card-foreground: 213 31% 91%;
 
-    --primary: 210 40% 98%;
+    --primary: 207, 90%, 54%;
     --primary-foreground: 222.2 47.4% 1.2%;
 
     --secondary: 222.2 47.4% 11.2%;
@@ -148,4 +148,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+
+/* Footer */
+.foot-btn {
+  display: flex;
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #fdebf3;
 }
