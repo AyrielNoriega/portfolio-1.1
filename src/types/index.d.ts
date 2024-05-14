@@ -32,10 +32,11 @@ export type SiteConfig = {
   name: string;
   description: string;
   url: string;
-  ogImage: string;
+  ogImage?: string;
   links: {
-    twitter: string;
+    twitter?: string;
     github: string;
+    linkedin?: string;
   };
 };
 
@@ -49,8 +50,8 @@ export type MarketingConfig = {
 };
 
 export type NavMenuConfig = {
-  infosNav: SidebarNavItem[];
-  examplesNav: SidebarNavItem[];
+  infosNav?: SidebarNavItem[];
+  examplesNav?: SidebarNavItem[];
   links: MenuItem[];
 };
 

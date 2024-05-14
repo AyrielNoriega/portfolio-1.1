@@ -13,11 +13,11 @@ const { title, description, bodyClass } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
     <head>
         <BaseHead title={title} description={description} />
     </head>
-    <body class={cn("flex flex-col min-h-screen", bodyClass)}>
+    <body class={cn("flex flex-col min-h-screen mx-auto max-w-screen-lg", bodyClass)}>
         <slot />
         <TailwindIndicator />
     </body>

@@ -15,7 +15,7 @@ module.exports = {
                 "node": true
             },
             "files": [
-                ".eslintrc.{js,cjs,astro}"
+                ".eslintrc.{js,cjs,ts}"
             ],
             "parserOptions": {
                 "sourceType": "script"
