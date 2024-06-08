@@ -1,8 +1,8 @@
 ---
 title: 'Fundamentos de Programación Orientada a Objetos (POO)'
 description: '¿Alguna vez te has preguntado cómo se construyen las aplicaciones y juegos que usas todos los días? La respuesta a menudo está en la Programación Orientada a Objetos (POO). En este artículo, desentrañaremos los fundamentos de programación orientada a objetos, una metodología esencial para cualquier aspirante a desarrollador de software. Sigue leyendo para descubrir cómo los objetos y las clases pueden transformar tu forma de programar.'
-pubDate: 'Jul 30 2024'
-coverImage: '/blog-placeholder-3.jpg'
+pubDate: 'Jun 08 2024'
+coverImage: '/assets/images/Design.jpeg'
 category: 'code'
 ---
 
