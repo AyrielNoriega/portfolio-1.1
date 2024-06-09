@@ -36,12 +36,12 @@ const guide = Astro.props.data;
     </div>
     {
       guide.pubDate && (
-        <span
+        <time
           class="font-medium text-sm text-muted-foreground"
           transition:name={"date-" + slug}
         >
           {formatDate(guide.pubDate)}
-        </span>
+        </time>
       )
     }
   </div>

@@ -47,7 +47,7 @@ const { title, description, pubDate, updatedDate, coverImage, category } =
         transition:name={"img-" + slug}
       />
       <div class="flex items-center justify-between">
-        <span
+        <time
           class="font-medium text-muted-foreground"
           transition:name={"date-" + slug}
         >
@@ -57,7 +57,7 @@ const { title, description, pubDate, updatedDate, coverImage, category } =
               <time datetime={formatDate(updatedDate)}>- Last updated on {formatDate(updatedDate)}</time>
             )
           }
-        </span>
+        </time>
       </div>
       <h1 class="font-heading text-4xl my-4" transition:name={"title-" + slug}>
         {title}
