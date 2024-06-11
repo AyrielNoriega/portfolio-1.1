@@ -51,10 +51,10 @@ const { title, description, pubDate, updatedDate, coverImage, category } =
           class="font-medium text-muted-foreground"
           transition:name={"date-" + slug}
         >
-          {formatDate(pubDate)}
+          <time datetime={formatDate(pubDate)}>{formatDate(pubDate)}</time>
           {
             updatedDate && (
-              <span>- Last updated on {formatDate(updatedDate)}</span>
+              <time datetime={formatDate(updatedDate)}>- Last updated on {formatDate(updatedDate)}</time>
             )
           }
         </span>

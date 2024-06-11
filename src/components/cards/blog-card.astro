@@ -43,12 +43,13 @@ const post = Astro.props;
     </a>
 
     <div class="flex items-center justify-between">
-        <span
+        <time
+            datetime={formatDate(post.data.pubDate)}
             class="font-medium text-gray-500"
             transition:name={"date-" + post.slug}
         >
             { formatDate(post.data.pubDate) }
-        </span>
+        </time>
     </div>
 
     <div class="flex items-center justify-between">
