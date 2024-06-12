@@ -40,8 +40,13 @@ class Coche:
 
 En la **Programación Orientada a Objetos**, los objetos pueden interactuar entre sí de varias maneras. Pueden heredar características de otras clases (herencia), pueden contener otros objetos (composición) y pueden interactuar con otros objetos mediante sus métodos y propiedades.
 
+## Modificadores de acceso
+En Python, los modificadores de acceso no existen en la forma estricta en que se encuentran en otros lenguajes de programación como Java o C++. Sin embargo, Python utiliza convenciones de nomenclatura para indicar el nivel de acceso a otros atributos y métodos de una clase. Estas convenciones no son verdaderas restricciones de acceso, sino más bien sugerencias para los desarrolladores que utilicen el código.
+Aquí están las principales convenciones de modificadores de acceso para los métodos y propiedades de una clase:
 
-Existen tres tipos principales de alcances en las propiedades y métodos en Python: públicos, privados y protegidos.
+1. Públicos,
+2. Privados
+3. Protegidos.
 
 ## Propiedades y Métodos Públicos
 Los elementos públicos son aquellos que pueden ser accedidos desde cualquier parte del código. En python, todas las propiedades y métodos son públicos por defecto.
