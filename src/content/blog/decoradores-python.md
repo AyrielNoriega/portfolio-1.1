@@ -1,7 +1,7 @@
 ---
 title: 'Cómo Usar Decoradores en Python: Guía Completa para Principiantes'
 description: 'Los decoradores en Python te permiten agregar funcionalidades a tus métodos sin modificar su código original y mucho más. Vamos a sumergirnos en este fascinante tema y descubrir cómo puedes utilizarlos en tu propio código.'
-pubDate: 'Jul 15 2022'
+pubDate: 'Jun 15 2024'
 coverImage: '/assets/images/decorators-python.jpg'
 category: 'python'
 ---
