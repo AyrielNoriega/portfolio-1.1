@@ -1,6 +1,6 @@
 ---
 title: 'Propiedades y Métodos Públicos, Privados y Protegidos en Python'
-description: "¿Algunas ves te has preguntado cómo mantener tu código organizado y seguro al mismo tiempo?
+description: "¿Cómo puedes mantener tu código organizado y seguro al mismo tiempo?
 Imagina que estás creando un programa y quieres asegurarte de que ciertos datos y funciones solo puedan ser utilizados de maneras específicas. Aquí es donde entran en juego las propiedades y métodos públicos, privados y protegidos. Sigue leyendo para descubrir cómo estos conceptos fundamentales en la Programación Orientada a Objetos (POO) pueden ayudarte a mejorar tu código."
 pubDate: 'Jun 11 2024'
 coverImage: '/assets/images/python-methods-properties.png'
