@@ -3,7 +3,7 @@ import type { SiteConfig } from "@/types";
 export const siteConfig: SiteConfig = {
     name: 'Ayriel Noriega',
     description:
-        'Desarrollador FullStack | Laravel, ReactJs, JavaScript, PHP, Node.js',
+        'Desarrollador FullStack |  Node.js, TypeScript, ReactJs, JavaScript, PHP, Laravel, Python',
     url: 'https://ayrielnoriega.com',
     links: {
         github: 'https://github.com/AyrielNoriega/',
