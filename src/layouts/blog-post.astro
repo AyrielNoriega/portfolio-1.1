@@ -50,6 +50,7 @@ const { title, description, pubDate, updatedDate, coverImage, category } =
         <time
           class="font-medium text-muted-foreground"
           transition:name={"date-" + slug}
+          datetime={formatDate(pubDate)}
         >
           <time datetime={formatDate(pubDate)}>{formatDate(pubDate)}</time>
           {
