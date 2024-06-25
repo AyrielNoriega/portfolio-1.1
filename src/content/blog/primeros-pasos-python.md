@@ -1,7 +1,7 @@
 ---
 title: 'Sintaxis Básica de Python'
 description: 'Python es el lenguaje perfecto para principiantes, y en esta guía te explicaré la sintaxis básica de Python de manera sencilla y directa.'
-pubDate: 'Jun 15 2024'
+pubDate: 'Jun 20 2024'
 coverImage: '/assets/images/decorators-python.jpg'
 category: 'python'
 ---

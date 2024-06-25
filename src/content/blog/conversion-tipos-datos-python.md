@@ -1,7 +1,7 @@
 ---
 title: 'Conversión de Tipos de Datos en Python'
 description: 'En programación, a menudo necesitamos convertir datos de un tipo a otro. Python ofrece varias maneras de realizar esrtas conversiones, permitiéndote trabajar con diferentes tipos de datos de manera eficiente y flexible.'
-pubDate: 'Jun 15 2024'
+pubDate: 'Jun 25 2024'
 coverImage: '/assets/images/decorators-python.jpg'
 category: 'python'
 ---
