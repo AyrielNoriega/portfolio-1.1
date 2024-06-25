@@ -181,4 +181,4 @@ greet("Alice")
 
 
 <br />
-<a class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 no-underline" href="/blog">Continúa leyendo</a>
+<a class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 no-underline" href="/blog/operaciones-cadenas-python/">Continúa leyendo</a>
