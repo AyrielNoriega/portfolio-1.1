@@ -1,7 +1,7 @@
 ---
 title: 'Estructuras de Control en Python'
 description: 'Las estructuras de control son fundamentales en cualquier lenguaje de programación, y Python no es la excepción. Estas estructuras permiten a los programadores controlar el flujo de la ejecución del programa, tomar deciciones y repetir bloques de código según sea necesario.'
-pubDate: 'Jun 22 2024'
+pubDate: 'Jul 14 2024'
 coverImage: '/assets/images/decorators-python.jpg'
 category: 'python'
 ---
@@ -14,140 +14,151 @@ category: 'python'
 Las declaraciones condicionales permiten ejecutar bloques de código basados en condiciones específicas.
 
 ### if
-La declaración `if` se utilizan 
-
-### Conversión Implícita
-Python realiza conversiones implícitas cuando es seguro hacerlo sin périda de datos. Por ejemplo, al sumar un entero y un flotante, Python convierte el entero a flotante automáticamente:
+La declaración `if` se utilizan para ejecutar bloques de código basado en condiciones especificadas.
 
 ```python
-entero = 10
-flotante = 5.5
+edad = 18
 
-resultado = entero + flotante
-print(resultado)  # Imprime 15.5
-print(type(resultado))  # Imprime <class 'float'>
+if edad >= 18:
+    print("Eres mayor de edad.")  # Se ejecuta si la condición es verdadera
+
+```	
+
+### elif
+La declaración de `elif` (abreviatura de "else if") se utiliza para comprobar múltiples condiciones. Si la primera  condición es falsa, se ejecuta la declaración `elif`.
+```python
+edad = 17
+
+if edad >= 18:
+    print("Eres mayor de edad.")
+elif edad >= 13:
+    print("Eres un adolescente.")  # Se ejecuta si la condición es verdadera
 ```
 
-En este ejemplo, `10` se convierte implícitamente a un flotante `10.0` para realizar la operación de suma.
-
-
-### Conversión Explícita
-La conversión explícita, también conocida como "casting", requiere que el programador use funciones específicas para convertir tipos de datos. Aquí están las funciones de conversión más comunes en Python:
-
-- int(): Convierte a entero
-- float(): Convierte a flotante
-- str(): Convierte a cadena de texto
-- list(): Convierte a lista
-- tuple(): Convierte a tupla
-- dict(): Convierte a diccionario
-- set(): Convierte a conjunto
-
-### Conversión a Entero
-Puedes convertir otros tipos de datos a enteros usando la función `int()`
+### else
+La declaración `else` se utiliza para ejecutar un bloque de código si ninguna de las condiciones anteriores es verdadera.
 
 ```python
-cadena = "123"
-flotante = 45.67
+edad = 12
 
-entero_desde_cadena = int(cadena)
-entero_desde_flotante = int(flotante)
-
-print(entero_desde_cadena)  # Imprime 123
-print(entero_desde_flotante)  # Imprime 45
+if edad >= 18:
+    print("Eres mayor de edad.")
+elif edad >= 13:
+    print("Eres un adolescente.")
+else:
+    print("Eres un niño.")  # Se ejecuta si ninguna de las condiciones anteriores es verdadera
 ```
 
-### Conversión a Flotante
+## Bucles for (iteración sobre secuencias)
+El bucle `for` se utiliza para iterar sobre una secuencia de elementos (como una lista, tupla, cadena o rango) y ejecutar un bloque de código para cada elemento de la secuencia.
+```python
+numeros = [1, 2, 3, 4, 5]
+
+for numero in numeros:
+    print(numero)  # Se ejecuta para cada elemento de la lista
+```
+
+El bucle `for` también se puede utilizar con la función `range()` para iterar sobre un rango de números.
+```python
+for i in range(5):
+    print(i)  # Impmrime los números del 0 al 4
+```
+
+## Bucles while (condicionales)
+El bucle `while` se utiliza para ejecutar un bloque de código mientras una condición se cumpla.
+```python
+contador = 0
+
+while contador < 5:
+    print(contador)
+    contador += 1  # Incrementa el contador en cada iteración
+```
+
+## Uso de break, continue y pass
+Las declaraciones de control `break`, `continue` y `pass` permiten controlar el flujo de un bucle.
+
+### break
+La declaración `break` se utiliza para salir de un bucle antes de que termine su iteración normal.
+```python
+numeros = [1, 2, 3, 4, 5]
+
+for numero in numeros:
+    if numero == 3:
+        break       # Se sale del bucle si el número es 3
+    print(numero)  # Imprime los números del 1 al 2
+```
+
+### continue
+La declaración `continue` se utiliza para saltar a la siguiente iteración de un bucle.
+```python
+numeros = [1, 2, 3, 4, 5]
+
+for numero in numeros:
+    if numero == 3:
+        continue    # Salta a la siguiente iteración si el número es 3
+    print(numero)  # Imprime los números 1, 2, 4, 5
+```
+
+### pass
+La declaración `pass` se utiliza como marcador de posición en el código. No realiza ninguna acción, pero se utiliza para evitar errores de sintaxis.
+```python
+if True:
+    pass  # No hace nada
+```
+
+otro ejemplo:
+```python
+for i in range(10):
+    if i % 2 == 0:
+        pass  # No hace nada, solo actúa como un marcador de posición
+    else:
+        print(i)  # Imprime los números impares
+```
+
+## Comprensiones de listas, diccionarios y conjuntos
+Las comprenhensions de listas, diccionarios y conjuntos permiten crear de forma concisa listas, diccionarios y conjuntos.
+
+### List Comprehensions
+```python
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [numero**2 for numero in numeros]
+print(cuadrados)  # Imprime [1, 4, 9, 16, 25]
+```
+
+### Dictionary Comprehension
 
 ```python
-cadena = "123.45"
-entero = 10
-
-flotante_desde_cadena = float(cadena)
-flotante_desde_entero = float(entero)
-
-print(flotante_desde_cadena)  # Imprime 123.45
-print(flotante_desde_entero)  # Imprime 10.0
+numeros = [1, 2, 3, 4, 5]
+cuadrados = {numero: numero**2 for numero in numeros}
+print(cuadrados)  # Imprime {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 ```
 
-### Conversión a Cadena de Texto
-Puedes convertir otros tipos de datos a cadenas de texto usando la función str().
+### Set Comprehensions
 
 ```python
-entero = 123
-flotante = 45.67
-
-cadena_desde_entero = str(entero)
-cadena_desde_flotante = str(flotante)
-
-print(cadena_desde_entero)  # Imprime "123"
-print(cadena_desde_flotante)  # Imprime "45.67"
-
+numeros = [1, 2, 3, 4, 5]
+cuadrados = {numero**2 for numero in numeros}
+print(cuadrados)  # Imprime {1, 4, 9, 16, 25}
 ```
 
-### Conversión a Lista
+### Tuple comprehension
+En Python, no existen las Tuple comprenhensions como una caracteristica directa, al menos no en la misma forma que las comprensiones de listas, conjuntos o diccionarios. Sim embargo, puedes utilizar generadores que se parecen a las comprensiones de listas pero producen un objeto generador en lugar de una tupla directamente. Luego, puedes convertir este generador en una tupla. 
+
+Para crear una tupla utilizando una construcción similar a las comprensiones, primero creas un generador y luego conviertes ese generador en una tupla usando la función `tuple()`.
 ```python
-tupla = (1, 2, 3)
-cadena = "Hola"
-
-lista_desde_tupla = list(tupla)
-lista_desde_cadena = list(cadena)
-
-print(lista_desde_tupla)  # Imprime [1, 2, 3]
-print(lista_desde_cadena)  # Imprime ['H', 'o', 'l', 'a']
+numeros = [1, 2, 3, 4, 5]
+generador = (numero ** 2 for x in numeros)
+tupla = tuple(generador)
+print(tupla)  # Imprime (1, 4, 9, 16, 25)
 
 ```
-
-### Conversión a Tupla
-
+o de otra forma:
 ```python
-lista = [1, 2, 3]
-cadena = "Hola"
-
-tupla_desde_lista = tuple(lista)
-tupla_desde_cadena = tuple(cadena)
-
-print(tupla_desde_lista)  # Imprime (1, 2, 3)
-print(tupla_desde_cadena)  # Imprime ('H', 'o', 'l', 'a')
-
+numeros = [1, 2, 3, 4, 5]
+cuadrados = tuple(numero**2 for numero in numeros)
+print(cuadrados)  # Imprime (1, 4, 9, 16, 25)
 ```
 
-### Conversión a Diccionario
-
-```python
-lista_pares = [("nombre", "Juan"), ("edad", 30)]
-
-diccionario_desde_lista = dict(lista_pares)
-
-print(diccionario_desde_lista)  # Imprime {'nombre': 'Juan', 'edad': 30}
-
-```
-
-### Conversión a Conjunto
-
-```python
-lista = [1, 2, 2, 3, 4, 4]
-cadena = "hola"
-
-conjunto_desde_lista = set(lista)
-conjunto_desde_cadena = set(cadena)
-
-print(conjunto_desde_lista)  # Imprime {1, 2, 3, 4}
-print(conjunto_desde_cadena)  # Imprime {'h', 'a', 'o', 'l'}
-
-```
-
-## Errores Comunes en la Conversión de Tipos
-Es importante tener en cuenta que no todas las conversiones son válidas y pueden generar errores si no se realizan correctamente. Por ejemplo, intentar convertir una cadena no numérica a un entero generará un `ValueError`.
-
-```python
-cadena = "abc"
-
-try:
-    entero_desde_cadena = int(cadena)
-except ValueError:
-    print("Error: No se puede convertir la cadena a entero.")
-
-```
 
 
 <br />
