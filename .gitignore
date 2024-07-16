@@ -22,6 +22,12 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+<<<<<<< HEAD
 .idx
 
 package-lock.json
+=======
+package-lock.json
+
+.idx
+>>>>>>> feature/post-estructureas-de-control
