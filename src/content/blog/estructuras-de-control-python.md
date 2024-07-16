@@ -142,7 +142,7 @@ print(cuadrados)  # Imprime {1, 4, 9, 16, 25}
 ```
 
 ### Tuple comprehension
-En Python, no existen las Tuple comprenhensions como una caracteristica directa, al menos no en la misma forma que las comprensiones de listas, conjuntos o diccionarios. Sim embargo, puedes utilizar generadores que se parecen a las comprensiones de listas pero producen un objeto generador en lugar de una tupla directamente. Luego, puedes convertir este generador en una tupla. 
+En Python, no existen las Tuple comprenhensions como una caracteristica directa, al menos no en la misma forma que las comprensiones de listas, conjuntos o diccionarios. Sin embargo, puedes utilizar generadores que se parecen a las comprensiones de listas pero producen un objeto generador en lugar de una tupla directamente. Luego, puedes convertir este generador en una tupla. 
 
 Para crear una tupla utilizando una construcción similar a las comprensiones, primero creas un generador y luego conviertes ese generador en una tupla usando la función `tuple()`.
 ```python
