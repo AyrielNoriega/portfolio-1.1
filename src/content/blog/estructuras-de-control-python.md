@@ -152,6 +152,8 @@ tupla = tuple(generador)
 print(tupla)  # Imprime (1, 4, 9, 16, 25)
 
 ```
+En este ejemplo, `(numero ** 2 for x in numeros)` es un generador que genera los cuadrados de cada número en la lista `numeros`. Luego, `tuple()` se utiliza para convertir ese generador en una tupla.
+
 o de otra forma:
 ```python
 numeros = [1, 2, 3, 4, 5]
@@ -159,7 +161,20 @@ cuadrados = tuple(numero**2 for numero in numeros)
 print(cuadrados)  # Imprime (1, 4, 9, 16, 25)
 ```
 
+### Comparación con Comprensiones de Listas
+A diferencia de las comprensiones de listas, que se escriben con corchetes, los generadores se escriben con paréntesis:
 
+```python
 
+numeros = [1, 2, 3, 4, 5]
+
+# Comprensión de listas
+lista = [numero**2 for numero in numeros]
+
+# Generador
+generador = (numero**2 for numero in numeros)
+tupla = tuple(generador)
+```
+<!-- 
 <br />
-<a class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 no-underline" href="/blog/operaciones-cadenas-python/">Continúa leyendo</a>
+<a class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 no-underline" href="/blog/operaciones-cadenas-python/">Continúa leyendo</a> -->
