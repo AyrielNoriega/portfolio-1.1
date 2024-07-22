@@ -64,6 +64,24 @@ for i in range(5):
     print(i)  # Impmrime los números del 0 al 4
 ```
 
+### `else` en Sentencias `for`
+
+```python
+for elemento in secuencia:
+    # Código para cada iteración
+    if condición:
+        break
+else:
+    # Código que se ejecuta si no se usa 'break'
+```
+En el bucle `for` el bloque `else` se ejecuta después de que el bucle for haya terminado de iterar sobre todos los elementos de la secuencia. Sin embargo, el bloque `else` no se ejecuta si el bucle `for` se termina debido a una instrucción `break`.
+
+En su documentación oficial dice:
+El `else`, cuando se usa con un bucle, la cláusula else tiene más en común con el else de una sentencia try que con el de un if: en una sentencia try la cláusula else se ejecuta cuando no se genera ninguna excepción, y el else de un bucle se ejecuta cuando no hay ningún break.
+https://docs.python.org/es/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
+
+
+
 ## Bucles while (condicionales)
 El bucle `while` se utiliza para ejecutar un bloque de código mientras una condición se cumpla.
 ```python
@@ -118,7 +136,21 @@ for i in range(10):
 ## Comprensiones de listas, diccionarios y conjuntos
 Las comprenhensions de listas, diccionarios y conjuntos permiten crear de forma concisa listas, diccionarios y conjuntos.
 
+
 ### List Comprehensions
+La List Comprehensions es una característica poderosa y compacta de Python que permite crear listas de manera concisa y elegante. Proporciona una forma de costruir listas de manera más rápida y eficiente que utilizando bucles tradicionales.
+
+
+Sintaxis básica:
+
+`nueva_lista = [expresión for elemento in iterable if condición]`
+
+- expresión: Es la expresión que se evalúa y se agrega a la lista resultante.
+- elemento: La variable que representa cada elemento del iterable.
+- iterable: Una secuencia de elementos como una lista, tupla, rango, etc.
+- condición (opcional): Una expresión booleana que filtra los elementos del iterable.
+
+
 ```python
 numeros = [1, 2, 3, 4, 5]
 cuadrados = [numero**2 for numero in numeros]
@@ -126,6 +158,18 @@ print(cuadrados)  # Imprime [1, 4, 9, 16, 25]
 ```
 
 ### Dictionary Comprehension
+
+Al igual que List Comprehension, Dictionary Comprehension ofrece una forma compacta de crear diccionarios sin necesidad de escribir bucles for tradicionales.
+
+Sintaxis básica:
+La sintaxis general de un Dictionary Comprehension en Python es la siguiente:
+`nuevo_diccionario = {clave: valor for elemento in iterable if condición}`
+
+- clave: Es la clave del diccionario que se agrega al nuevo diccionario.
+- valor: El valor asociado a la clave.
+- elemento: La variable que representa cada elemento del iterable.
+- iterable: Una secuencia de elementos como una lista, tupla, rango, etc.
+- condición (opcional): Una expresión booleana que filtra los elementos del iterable.
 
 ```python
 numeros = [1, 2, 3, 4, 5]
@@ -175,6 +219,6 @@ lista = [numero**2 for numero in numeros]
 generador = (numero**2 for numero in numeros)
 tupla = tuple(generador)
 ```
-<!-- 
+
 <br />
-<a class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 no-underline" href="/blog/operaciones-cadenas-python/">Continúa leyendo</a> -->
+<a class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 no-underline" href="/blog/listas-tuplas-diccionarios-sets/">Continúa leyendo</a>
