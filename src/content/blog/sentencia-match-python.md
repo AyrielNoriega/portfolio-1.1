@@ -114,8 +114,8 @@ procesar_estructura(datos)
 ```
 La sentencia `match` se usa para comparar el valor de estructura contra varios patrones.
 
--`{"nombre": nombre}`: Este parte del patrón verifica si el diccionario estructura tiene una clave llamada nombre. Si la tiene, el valor asociado a esa clave se asigna a la variable nombreb
--`"detalles": {"edad": edad, "ciudad": ciudad}`: Esta parte del patrón verifica si el diccionario tiene una clave llamada detalles, cuyo valor es otro diccionario que contiene las claves edad y ciudad. Si estos existen, sus valores se asignan a las variables edad y ciudad, respectivamente.
+- `{"nombre": nombre}`: Este parte del patrón verifica si el diccionario estructura tiene una clave llamada nombre. Si la tiene, el valor asociado a esa clave se asigna a la variable nombre.
+- `"detalles": {"edad": edad, "ciudad": ciudad}`: Esta parte del patrón verifica si el diccionario tiene una clave llamada detalles, cuyo valor es otro diccionario que contiene las claves edad y ciudad. Si estos existen, sus valores se asignan a las variables edad y ciudad, respectivamente.
 
 
 
@@ -134,6 +134,11 @@ def evaluar_numero(num):
         case _:
             return "No es un número válido"
 ```
+
+## Conclusión
+
+`match` en Python 3.10 ofrece una forma poderosa y flexible de comparar patrones, superando las limitaciones de las declaraciones `if-elif-else` tradicionales. Su capacidad para manejar estructuras de datos complejas, patrones anidados y guardas la convierte en una herramienta esencial para escribir código más legible, eficiente y robusto. 
+
 
 <!-- 
 <br />
